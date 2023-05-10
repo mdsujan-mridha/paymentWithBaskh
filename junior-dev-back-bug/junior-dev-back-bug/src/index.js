@@ -25,7 +25,7 @@ The previous way will keep working but will not be served as endpoint
 
   // Connect to MongoDB
   connectMongoDB(settings.mongodbURL)
-    .then(function (res) {
+    .then(function (req,res) {
       console.log(`=> ${res}!`);
 
       // Boot Up the server & services

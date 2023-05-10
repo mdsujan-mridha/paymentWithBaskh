@@ -24,6 +24,11 @@ import * as operations from './controllers/operations';
 import settings from '../settings.json';
 import { imageUp } from './controllers/imageUp';
 
+// const app = express();
+// app.use(cors());
+
+
+// this.express.use(cors());
 export default class App {
   constructor() {
     this.express = express();
@@ -98,6 +103,7 @@ export default class App {
   listen() {
     // Serve Front-end
     this.express.get('*', (req, res) => {
+      res.send('Backend is working with http"//localhost:9000');
       res.sendFile(path.resolve(__dirname, '..', 'client', 'index.html'));
     });
 

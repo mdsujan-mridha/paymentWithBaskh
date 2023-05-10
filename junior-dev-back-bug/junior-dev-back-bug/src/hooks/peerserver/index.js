@@ -1,4 +1,7 @@
 import { ExpressPeerServer } from 'peer';
+import cors from 'cors';
+const app = ExpressPeerServer();
+app.use(cors());
 
 export default function () {
   // Peer Server

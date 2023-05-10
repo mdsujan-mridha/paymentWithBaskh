@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const mongodbURL = 'mongodb+srv://sujan:sujan@cluster0.wmqskss.mongodb.net/?retryWrites=true&w=majority';
+// const mongodbURL = 'mongodb+srv://sujan:sujan@cluster0.wmqskss.mongodb.net/?retryWrites=true&w=majority';
 export default function connectMongoDB(mongodbURL) {
   return new Promise(function (resolve, reject) {
     // Set mongoose properties
@@ -19,7 +19,7 @@ export default function connectMongoDB(mongodbURL) {
   
 }
 
-connectMongoDB(mongodbURL).then((message)=>{console.log('server running with localhost:9000');}).catch((error) =>{console.error('Failed to connect to mongoDB',error);});
+// connectMongoDB(mongodbURL).then((message)=>{console.log('server running with localhost:9000');}).catch((error) =>{console.error('Failed to connect to mongoDB',error);});
 
     
 
