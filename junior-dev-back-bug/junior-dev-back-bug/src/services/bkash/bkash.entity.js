@@ -12,9 +12,9 @@ export const createPayment = ({ bkash }) => async (req, res) => {
       email: req.body.email,
       totalPrice: req.body.totalPrice,
     });
-    res.status(500).send(createAgreement?.bkashURL);
+    res.status(201).send(createAgreement?.bkashURL);
   } catch (error) {
-    res.status(500).send('something went wrong');
+    res.status(400).send('something went wrong');
   }
 };
 

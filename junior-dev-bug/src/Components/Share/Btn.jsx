@@ -11,13 +11,13 @@ export default function Btn({
   type = 'button',
   className = 'bg-secondary',
   children = 'button',
-  disabled = false,
+  // disabled = false,
   onClick = () => { },
 }) {
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
+      // disabled={disabled}
       type={type}
       className={`bg-primary rounded-[3.125rem] py-3 px-2.5 w-full text-base text-textHeader font-semibold ${className}`}
     >

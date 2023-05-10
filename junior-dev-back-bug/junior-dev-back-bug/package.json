@@ -23,6 +23,7 @@
     "express": "^4.18.2",
     "express-actuator": "^1.8.4",
     "express-form-data": "^2.0.19",
+    "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.11.1",
     "mongoose-paginate-v2": "^1.7.1",
@@ -31,6 +32,7 @@
     "peer": "^1.0.0",
     "socket.io": "^4.6.1",
     "spdy": "^4.0.2",
+    "sslcommerz-lts": "^1.1.0",
     "web-push": "^3.5.0"
   },
   "devDependencies": {

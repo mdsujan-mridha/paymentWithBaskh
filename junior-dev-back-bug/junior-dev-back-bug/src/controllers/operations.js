@@ -37,7 +37,7 @@ const find = ({ table, key = {} }) => new Promise((resolve, reject) => {
     limit: key?.query?.limit || 10,
     sort: { ...!key?.query?.sortBy && { createdAt: -1 } }
   };
-  // prepare query object with provied queries to find.
+  // prepare query object with provide queries to find.
   queryKeys.forEach(async k => {
     if (typeof key?.query[k] === 'string' && key?.query[k].startsWith('{"') && key?.query[k].endsWith('"}')) key.query[k] = JSON.parse(key?.query[k]);
     if (k === 'sortBy') {

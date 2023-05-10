@@ -7,15 +7,21 @@ const useGlobal = () => {
   const [mbCode, setMbCode] = useState(countryCode[15]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  axios.defaults.headers = {
-    'Content-Type': 'application/json',
-    // Authorization: 'myspecialpassword'
-    authorization: "id_token"
-  }
+
   const toggleModal = () => setOpen(!open);
 
   const getPayment = (body) => {
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/api/bkash`, { ...body, totalPrice });
+    axios.post(`${process.env.REACT_APP_SERVER_URL}`, { "body": body }, {
+      headers: {
+        'Content-Type': 'application/json'
+        //set authorize here
+      },
+      
+    })
+    .then(res =>{
+      console.log(res.data);
+    });
+
   }
   return {
     toggleModal,
