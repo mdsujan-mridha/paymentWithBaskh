@@ -13,7 +13,7 @@ export default function Order() {
     );
     useEffect(() => {
         setTotalPrice(total + 1);
-    }, [setTotalPrice,total]);
+    }, [setTotalPrice, total]);
     return (
         <div>
             <div className="border border-border border-opacity-5 rounded-[0.5rem] py-4 px-5">
@@ -24,8 +24,14 @@ export default function Order() {
                             <td className="pt-5 pb-2 text-base font-semibold text-black">Product</td>
                             <td className="pt-5 pb-2 text-base font-semibold text-black text-right">Subtotal</td>
                         </tr>
-                        {CartProducts.map((product) => <TbRow key={product?.id} label={product.product}>৳ {product.price} TK </TbRow>)}
-                        <TbRow  label="Subtotal"><p className="text-black">৳ {total}TK </p></TbRow>
+                        {CartProducts.map((product, index) =>
+                            <React.Fragment
+                            key={index}
+                            >
+                                <TbRow label={product.product}>৳ {product.price} TK </TbRow>
+                            </React.Fragment>
+                        )}
+                        <TbRow label="Subtotal"><p className="text-black">৳ {total}TK </p></TbRow>
                     </tbody>
                 </table>
                 <p className="py-5 text-pColor">Shipping</p>
